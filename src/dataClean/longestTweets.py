@@ -20,6 +20,6 @@ class LongestTweets:
                 longest_tweets[val] = long_tweets
         return longest_tweets
 
-df = pd.read_csv('C:\\Users\\Yisroel Meir\\PycharmProjects\\Antisemitic_tweets\\data\\tweets_dataset.csv')
-a = LongestTweets(df)
-print(a.longest('Biased','Text'))
+# df = pd.read_csv('C:\\Users\\Yisroel Meir\\PycharmProjects\\Antisemitic_tweets\\data\\tweets_dataset.csv')
+# a = LongestTweets(df)
+# print(a.longest('Biased','Text'))
