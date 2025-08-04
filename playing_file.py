@@ -1,4 +1,5 @@
 import pandas as pd
+import re
 from pandas import RangeIndex
 
 df = pd.read_csv('data/tweets_dataset.csv')
@@ -6,8 +7,17 @@ df = pd.read_csv('data/tweets_dataset.csv')
 print(df.columns)
 df.drop(['TweetID','Username'],axis=1,inplace=True)
 print(df.columns)
+print(df["Text"])
+# for val in df['Text']:
+#     print(val)
+#     val = re.sub("[^a-zA-Z]", "",val)
+# print(df["Text"])
+#
+# df['Text'].replace(val,re.sub("[^a-zA-Z]", "",val))
 
-
+for row in df['Text']:
+    row =re.sub("[^a-zA-Z]", "",row)
+print(df["Text"])
 
 
 
