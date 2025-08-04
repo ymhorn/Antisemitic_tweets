@@ -2,6 +2,29 @@ import pandas as pd
 from pandas import RangeIndex
 
 df = pd.read_csv('data/tweets_dataset.csv')
+
+print(df.columns)
+df.drop(['TweetID','Username'],axis=1,inplace=True)
+print(df.columns)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # print(df.head())
 # print(df.columns)
 # print(df['Biased'].unique())
@@ -40,18 +63,18 @@ df = pd.read_csv('data/tweets_dataset.csv')
 
 # df['split_text'] = df['Text'].str.split(' ')
 # print(df['split_text'])
-
-all = []
-for a in df['Text']:
-    all.append(a.split(' '))
-capital = 0
-for i in all:
-    for j in i:
-        if j.isupper():
-            print(j)
-            capital += 1
-
-print(capital)
+#
+# all = []
+# for a in df['Text']:
+#     all.append(a.split(' '))
+# capital = 0
+# for i in all:
+#     for j in i:
+#         if j.isupper():
+#             print(j)
+#             capital += 1
+#
+# print(capital)
 
 # a = 'HELLO'
 # if a.islower():
