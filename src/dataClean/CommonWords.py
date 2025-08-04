@@ -22,6 +22,6 @@ class CommonWords:
             common_words.append(word)
         return common_words
 
-df = pd.read_csv('C:\\Users\\Yisroel Meir\\PycharmProjects\\Antisemitic_tweets\\data\\tweets_dataset.csv')
-a = CommonWords(df)
-print(a.common('Text'))
+# df = pd.read_csv('C:\\Users\\Yisroel Meir\\PycharmProjects\\Antisemitic_tweets\\data\\tweets_dataset.csv')
+# a = CommonWords(df)
+# print(a.common('Text'))

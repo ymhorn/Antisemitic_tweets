@@ -20,20 +20,40 @@ df = pd.read_csv('data/tweets_dataset.csv')
 # df1.sort_values(by='len_text',inplace=True)
 # # print(df1['Text'].str.len())
 # print(df1['Text'][:3])
+# all = []
+# for a in df['Text']:
+#     all.append(a.split(' '))
+# dict = {}
+# for i in all:
+#     for j in i:
+#         if j in dict:
+#             dict[j] += 1
+#         else:
+#             dict[j] = 1
+# # print(df['Text'].str.split(' '))
+# df1 = pd.DataFrame(dict.items(),columns=['words','amount'])
+# df1.sort_values('amount',inplace=True)
+# a = []
+# for word in df1['words'][-10:]:
+#     a.append(word)
+# print(a)
+
+# df['split_text'] = df['Text'].str.split(' ')
+# print(df['split_text'])
+
 all = []
 for a in df['Text']:
     all.append(a.split(' '))
-dict = {}
+capital = 0
 for i in all:
     for j in i:
-        if j in dict:
-            dict[j] += 1
-        else:
-            dict[j] = 1
-# print(df['Text'].str.split(' '))
-df1 = pd.DataFrame(dict.items(),columns=['words','amount'])
-df1.sort_values('amount',inplace=True)
-a = []
-for word in df1['words'][-10:]:
-    a.append(word)
-print(a)
+        if j.isupper():
+            print(j)
+            capital += 1
+
+print(capital)
+
+# a = 'HELLO'
+# if a.islower():
+#     a = True
+# print(a)
