@@ -9,3 +9,9 @@ print(df['Keyword'].unique())
 print(df.shape)
 for val in df['Biased'].unique():
     print(val,df['Biased'].value_counts()[val])
+
+df['len_text'] = df['Text'].str.split(' ').str.len()
+print(df.groupby('Biased')['len_text'].mean())
+print(df.head())
+df.drop('len_text',axis=1,inplace=True)
+print(df.head())
